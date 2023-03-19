@@ -1,0 +1,95 @@
+//exercicio 1
+import java.util.Scanner;
+
+public class AntecessorSucessor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Digite um número inteiro: ");
+        int numero = sc.nextInt();
+        
+        int antecessor = numero - 1;
+        int sucessor = numero + 1;
+        
+        System.out.println("O antecessor de " + numero + " é " + antecessor);
+        System.out.println("O sucessor de " + numero + " é " + sucessor);
+        
+        sc.close();
+    }
+}
+
+// exercicio 2
+
+import java.util.Scanner;
+
+public class MediaAritmetica {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Digite o primeiro número: ");
+        double num1 = entrada.nextDouble();
+        
+        System.out.print("Digite o segundo número: ");
+        double num2 = entrada.nextDouble();
+        
+        System.out.print("Digite o terceiro número: ");
+        double num3 = entrada.nextDouble();
+        
+        double media = (num1 + num2 + num3) / 3;
+        
+        System.out.println("A média aritmética dos números informados é: " + media);
+        
+        entrada.close();
+    }
+}
+// exercicio 3
+
+import java.util.Scanner;
+
+public class Desconto {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Digite o valor da compra: R$ ");
+        double valor = entrada.nextDouble();
+        
+        double desconto = 0;
+        if (valor >= 10 && valor < 100) {
+            desconto = 0.05;
+        } else if (valor >= 100 && valor < 500) {
+            desconto = 0.1;
+        } else if (valor >= 500) {
+            desconto = 0.15;
+        }
+        
+        double valorFinal = valor - (valor * desconto);
+        
+        System.out.printf("Valor da compra: R$ %.2f%n", valor);
+        System.out.printf("Desconto aplicado: %.0f%%%n", desconto * 100);
+        System.out.printf("Valor final com desconto: R$ %.2f%n", valorFinal);
+        
+        entrada.close();
+    }
+}
+// exercicio 4
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class IdentificadorFuncionario {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Digite o código identificador de funcionário: ");
+        String codigo = entrada.nextLine();
+        
+        boolean codigoValido = Pattern.matches("^BR\\d{4}X$", codigo);
+        
+        if (codigoValido) {
+            System.out.println("Código identificador válido!");
+        } else {
+            System.out.println("Código identificador inválido!");
+        }
+        
+        entrada.close();
+    }
+}
