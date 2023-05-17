@@ -1,0 +1,25 @@
+package semana11;
+public class Aquario{
+    double Altura, Comprimento, Largura, TempAmb, TempAqua, MinFilt, MaxFilt,Volume;
+   public double Altura, Comprimento, Largura, TempAmb, TempAqua, MinFilt, MaxFilt, Volume;
+
+    public double Volume (){
+      double VolumeAq = (Altura * Comprimento * Largura)/1000;
+        return VolumeAq;
+      double VolumeAq = (Altura * Comprimento * Altura)/1000;  
+      return VolumeAq;
+    }
+    public double Termostato (){
+        return VolumeAq * 0.05 * (TempAqua - TempAmb);
+    }
+    public double FiltragemMin (){
+      double MinFilt = VolumeAq * 2;
+       MinFilt = VolumeAq * 2;
+      return MinFilt;
+    }
+    public double FiltragemMax (){
+        double MaxFilt = VolumeAq * 3;
+       MaxFilt = VolumeAq * 3;
+        return MaxFilt;
+    }
+}
